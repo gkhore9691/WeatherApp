@@ -42,8 +42,8 @@ A React-based weather application that displays the current weather of a selecte
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/aganitha-weather-app.git
-   cd aganitha-weather-app
+   git clone https://github.com/gkhore9691/WeatherApp.git
+   cd WeatherApp
    ```
 
 2. **Install Dependencies**
@@ -58,15 +58,7 @@ A React-based weather application that displays the current weather of a selecte
    yarn install
    ```
 
-3. **Environment Variables**
-
-   Create a `.env` file in the root directory and add the following variable to store the Open-Meteo API URL:
-
-   ```env
-   REACT_APP_WEATHER_API_URL=https://api.open-meteo.com
-   ```
-
-4. **Start the Application**
+3. **Start the Application**
 
    ```bash
    npm start
@@ -89,10 +81,15 @@ aganitha-weather-app/
 │   ├── components/         # Reusable React components
 │   │   ├── Searchbar.js
 │   │   └── WeatherDisplay.js
-│   ├── hooks/
+|   │   └── NoData.js
+│   ├── Context/            # Context for managing app-wide state
+│   │   └── AppContext.js
+│   ├── Hooks/
 │   │   └── useLocation.js  # Custom hook for fetching location data
-│   ├── context/
-│   │   └── AppContext.js   # Context for managing app-wide state
+│   |   └── useWeather.js   # Custom hook for fetching weather data
+│   ├── Services/
+│   │   └── fetchWeatherData.js # Fetches weather data from Open-Meteo API
+│   |   └── fetchLocationData.js # Fetches location data from Open-Meteo API
 │   ├── App.js              # Main application component
 │   └── index.js            # App entry point
 └── README.md
@@ -102,11 +99,3 @@ aganitha-weather-app/
 
 - **Search for a City**: Use the search bar at the top to look up a city. Results will populate based on your search, and selecting one will fetch and display the weather data.
 - **Weather Display**: The main section shows details like temperature, wind speed, direction, and whether it’s day or night in the selected location.
-
-## License
-
-This project is open-source and available under the MIT License.
-
----
-
-### Additional Notes
