@@ -1,72 +1,112 @@
-# Getting Started with Create React App
+# Aganitha Weather App 🌤️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based weather application that displays the current weather of a selected city. The app uses the Open-Meteo API to retrieve real-time weather data and Tailwind CSS for a modern, responsive UI.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **City Search**: Search for any city to get current weather data.
+- **Real-time Data**: Displays temperature, wind speed, direction, and other weather details using the Open-Meteo API.
+- **Responsive UI**: Designed for mobile and desktop with Tailwind CSS.
+- **Custom Components**: Reusable and modular React components for easy maintenance.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+![Aganitha Weather App Screenshot](screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for fast UI development.
+- **Open-Meteo API**: Fetches real-time weather data for selected cities.
+- **React Icons**: For consistent and scalable icons across the app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://npmjs.com/) or [Yarn](https://yarnpkg.com/) (package manager)
 
-### `npm run eject`
+### Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the Repository**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/yourusername/aganitha-weather-app.git
+   cd aganitha-weather-app
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install Dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+   or, if using Yarn:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   yarn install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Environment Variables**
 
-### Code Splitting
+   Create a `.env` file in the root directory and add the following variable to store the Open-Meteo API URL:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```env
+   REACT_APP_WEATHER_API_URL=https://api.open-meteo.com
+   ```
 
-### Analyzing the Bundle Size
+4. **Start the Application**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+   or with Yarn:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   yarn start
+   ```
 
-### Advanced Configuration
+   The application should now be running on `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Project Structure
 
-### Deployment
+```plaintext
+aganitha-weather-app/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # Reusable React components
+│   │   ├── Searchbar.js
+│   │   └── WeatherDisplay.js
+│   ├── hooks/
+│   │   └── useLocation.js  # Custom hook for fetching location data
+│   ├── context/
+│   │   └── AppContext.js   # Context for managing app-wide state
+│   ├── App.js              # Main application component
+│   └── index.js            # App entry point
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Usage
 
-### `npm run build` fails to minify
+- **Search for a City**: Use the search bar at the top to look up a city. Results will populate based on your search, and selecting one will fetch and display the weather data.
+- **Weather Display**: The main section shows details like temperature, wind speed, direction, and whether it’s day or night in the selected location.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# WeatherApp
-# WeatherApp
+## License
+
+This project is open-source and available under the MIT License.
+
+---
+
+### Additional Notes
